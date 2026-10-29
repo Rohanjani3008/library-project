@@ -1,22 +1,39 @@
-# Python & Virtual Environments
+# Virtual Environments
 venv/
+.venv/
+env/
+.env/
 backend/venv/
-*.pyc
+backend/.venv/
+
+# Environment Variables & Secrets
+.env
+.env.*
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# Python Cache & Bytecode
 __pycache__/
+*/__pycache__/
+*/**/__pycache__/
+*.py[cod]
+*$py.class
 *.pyo
 *.pyd
 .Python
-env/
-.env
 
-# Django
-*.log
-*.pot
+# Django Database & Media
 *.sqlite3
 db.sqlite3
+backend/db.sqlite3
 media/
+backend/media/
+staticfiles/
+backend/staticfiles/
+*.log
 
-# Node & Frontend
+# Node & Frontend Builds
 node_modules/
 frontend/node_modules/
 dist/
@@ -24,8 +41,9 @@ frontend/dist/
 dist-ssr/
 *.local
 
-# IDE & OS
+# IDE & OS Files
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
+*.swp
